@@ -4,6 +4,7 @@
 * [Challenge Goal](#challenge-goal)
 * [Challenge Requirements](#challenge-requirements)
 * [Challenge Result](#challenge-result)
+---
 
 ## Challenge Goal
 Create an application that asks the user questions to create a README.md file automatically.
@@ -46,3 +47,16 @@ Create an application that asks the user questions to create a README.md file au
 
 ### GitHub Repository
 [GitHub Repository URL]()
+
+---
+
+*Tip: install these packages to be able to use this application:* <br>
+
+**MySQL** <br>
+`npm i --save mysql2` <br>
+
+**Inquirer** <br>
+`npm i inquirer` <br>
+
+**console.table** <br>
+`npm install console.table --save`
