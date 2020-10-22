@@ -6,5 +6,5 @@ const {homePage} = require('./utils/inquirer')
 connection.connect(err => {
   if (err) throw err;
   console.log('ID ' + connection.threadId + ' currently connected.');
-  homePage()
+  startPage()
 });
