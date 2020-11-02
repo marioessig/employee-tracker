@@ -29,16 +29,16 @@ FROM role ,department
 WHERE role.department_id = department.id;
 `
 
-const addDepartment = `
+const insertDepartment = `
 INSERT INTO department (department_name)
 VALUES (?)
 `
 
-const addRole = `
+const insertRole = `
 INSERT INTO role SET ?
 `
 
-const addEmployee = `
+const insertEmployee = `
 INSERT INTO employee SET ?
 `
 
@@ -52,8 +52,8 @@ module.exports = {
     employees,
     departments,
     roles,
-    addDepartment,
-    addRole,
-    addEmployee,
+    insertDepartment,
+    insertRole,
+    insertEmployee,
     updateEmployee
 }

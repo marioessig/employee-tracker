@@ -43,14 +43,17 @@ Create an application that asks the user questions to create a README.md file au
 ![mockup]()
 
 ### Application Video Walkthrough
-[Application Walkthrough]()
+[Application Walkthrough](https://youtu.be/-xmYGjmSPr4)
 
 ### GitHub Repository
-[GitHub Repository URL]()
+[GitHub Repository URL](https://github.com/marioessig/employee-tracker)
 
 ---
 
 *Tip: install these packages to be able to use this application:* <br>
+
+**NPM** <br>
+`npm init` <br>
 
 **MySQL** <br>
 `npm i --save mysql2` <br>
@@ -60,3 +63,6 @@ Create an application that asks the user questions to create a README.md file au
 
 **console.table** <br>
 `npm install console.table --save`
+
+**Using dotenv?** <br>
+`npm install dotenv --save`

@@ -1,8 +1,8 @@
 // set dependencies
 const connection = require('./connection')
 const inquirer = require('inquirer')
-//const consoleTable = require('console.table')
-const { employees, departments, roles, addDepartment, addRole, addEmployee } = require('./query')
+const consoleTable = require('console.table')
+const { employees, departments, roles, insertDepartment, insertRole, insertEmployee } = require('./query')
 
 
 //this function loads the 'home page'
@@ -16,11 +16,11 @@ const startPage = () => {
                 'View all departments', 
                 'View all employees', 
                 'View all roles', 
-                'Add an employee', 
-                'Add a department', 
-                'Add a role', 
-                "Update an employee's manager", 
-                'Update an employee role', 
+                'Add employee', 
+                'Add department', 
+                'Add role', 
+                "Update employee's manager", 
+                'Update employee role', 
                 'View employees by manager', 
                 'View employees by department', 
                 'Exit'
@@ -40,19 +40,19 @@ const startPage = () => {
                 case 'View all roles':
                     getRoles();
                     break;
-                case 'Add a department':
+                case 'Add department':
                     addDep();
                     break;
-                case 'Add an employee':
+                case 'Add employee':
                     addEmployee()
                     break;
-                case 'Add a role':
+                case 'Add role':
                     addRole();
                     break;
-                case 'Update an employee role':
+                case 'Update employee role':
                     updateEmployee()
                     break;
-                case "Update an employee's manager":
+                case "Update employee's manager":
                     updateManager()
                     break;
                 case "View employees by department":
@@ -115,7 +115,7 @@ const addDep = () => {
         }
     ])
         .then(({ newDep }) => {
-            connection.query(addDepartment, newDep, function (err, res) {
+            connection.query(insertDepartment, newDep, function (err, res) {
                 if (err) throw err;
                 console.table(res);
                 startPage();
@@ -155,7 +155,7 @@ function addRole() {
                 })
 
                 // add the role into the database
-                connection.query(addRole, {
+                connection.query(insertRole, {
                     title: response.title,
                     salary: response.salary,
                     department_id: resId
@@ -264,7 +264,7 @@ const addEmployee = () => {
 
                     const managers_id = res[0].id
 
-                    connection.query(addEmployee, {
+                    connection.query(insertEmployee, {
                         first_name: firstName,
                         last_name: lastName,
                         role_id: roles_id,
