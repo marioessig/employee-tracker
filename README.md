@@ -39,9 +39,6 @@ Create an application that asks the user questions to create a README.md file au
 
 ## Challenge Result
 
-### Mock-Up
-![mockup]()
-
 ### Application Video Walkthrough
 [Application Walkthrough](https://youtu.be/-xmYGjmSPr4)
 
